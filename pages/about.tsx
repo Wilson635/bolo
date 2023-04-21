@@ -1,7 +1,7 @@
 import Image from "next/image";
 import AboutPic from "@/public/assets/about-us.png";
-import Icon from "@/public/assets/icon.svg";
 import Person1 from "@/public/assets/person1.png";
+import Icon from "@/public/assets/icon.svg";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 const About = () => {
@@ -95,10 +95,10 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col-reverse items-center gap-5 px-5 md:px-10 md:flex-row">
-          <div className="basis-1/2 flex flex-col gap-5 justify-evenly">
+        <div className="flex flex-col-reverse items-center gap-5 px-5 md:gap-14 md:px-10 md:flex-row">
+          <div className="basis-1/2 flex flex-col gap-5 justify-evenly items-center md:items-end">
             <div className="text-5xl font-bold">Our Mission</div>
-            <div className="text-sm text-zinc-600 leading-relaxed">
+            <div className="text-sm text-zinc-600 leading-relaxed text-center md:text-end">
               We&apos;re building economic infrastructure for the internet
               Businesses of every size, be it new startups or public compagnies,
               use our software to accept payments and manage their businesses
@@ -123,10 +123,10 @@ const About = () => {
             <Image src={Person1} alt={""} height={200} width={200} />
           </div>
         </div>
-        <div className="flex flex-col-reverse items-center my-14 gap-5 px-5 md:px-10 md:flex-row-reverse">
-          <div className="basis-1/2 flex flex-col gap-5 justify-evenly">
+        <div className="flex flex-col-reverse items-center my-14 gap-5 px-5 md:gap-14 md:px-10 md:flex-row-reverse">
+          <div className="basis-1/2 flex flex-col gap-5 justify-evenly items-center md:items-start">
             <div className="text-5xl font-bold">Our Vision</div>
-            <div className="text-sm text-zinc-600 leading-relaxed">
+            <div className="text-sm text-zinc-600 leading-relaxed text-center md:text-start">
               We&apos;re building economic infrastructure for the internet
               Businesses of every size, be it new startups or public compagnies,
               use our software to accept payments and manage their businesses
