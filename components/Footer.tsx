@@ -1,5 +1,3 @@
-import logo from "@/public/assets/bolo.jpeg";
-import Image from "next/image";
 import {
   FaDribbble,
   FaFacebookF,
@@ -11,10 +9,10 @@ import {
 const Footer = () => {
   return (
     <footer>
-      <div className="px-5 lg:px-20 py-2 text-white bg-slate-800">
+      <div className="px-5 lg:px-20 py-2">
         <div className="flex flex-col-reverse lg:flex-row lg:flex lg:justify-between gap-4">
           <div className="grid grid-cols-3 justify-items-center gap-5">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 font-semibold">
               <h1 className="text-2xl font-bold mb-5 text-blue-600">
                 Navigation
               </h1>
@@ -23,14 +21,14 @@ const Footer = () => {
               <a href="#">Find companies</a>
               <a href="#">Carrer advice</a>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 font-semibold">
               <h1 className="text-2xl font-bold mb-5 text-blue-600">Company</h1>
               <a href="#">The Team</a>
               <a href="#">About Us</a>
               <a href="#">Blog</a>
               <a href="#">Press</a>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 font-semibold">
               <h1 className="text-2xl font-bold mb-5 text-blue-600">
                 Resources
               </h1>
@@ -52,7 +50,7 @@ const Footer = () => {
                 placeholder="Email"
                 className="bg-slate-200 rounded-l-2xl py-2.5 px-3 text-sm w-1/2"
               />
-              <button className="bg-blue-600 rounded-r-2xl p-2.5 text-sm text-white font-semibold">
+              <button className="bg-blue-600 hover:bg-blue-700 transition rounded-r-2xl p-2.5 text-sm text-white font-semibold">
                 Subscribe
               </button>
             </div>
