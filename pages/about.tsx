@@ -3,6 +3,7 @@ import NavBar from "@/components/Navbar"
 import AboutPic from "@/public/assets/about-us.png"
 import Icon from "@/public/assets/icon.png"
 import Person1 from "@/public/assets/person1.png"
+import Person2 from "@/public/assets/person2.png"
 import Head from "next/head"
 import Image from "next/image"
 const About = () => {
@@ -127,13 +128,13 @@ const About = () => {
             </div>
           </div>
           <div className="flex w-full max-w-sm basis-1/2 justify-center rounded-3xl bg-slate-200">
-            <Image src={Person1} alt={""} height={200} width={200} />
+            <Image src={Person1} alt={""} height={500} width={500} />
           </div>
         </div>
         <div className="my-14 flex flex-col-reverse items-center gap-5 px-5 md:flex-row-reverse md:gap-14 md:px-10">
           <div className="flex basis-1/2 flex-col items-center justify-evenly gap-5 md:items-start">
             <div className="text-5xl font-bold">Our Vision</div>
-            <div className="text-center text-sm leading-relaxed text-zinc-600 md:text-start">
+            <div className="text-center text-sm leading-relaxed text-zinc-500 md:text-start">
               We&apos;re building economic infrastructure for the internet
               Businesses of every size, be it new startups or public compagnies,
               use our software to accept payments and manage their businesses
@@ -155,7 +156,7 @@ const About = () => {
             </div>
           </div>
           <div className="flex w-full max-w-sm basis-1/2 justify-center rounded-3xl bg-slate-200">
-            <Image src={Person1} alt={""} height={200} width={200} />
+            <Image src={Person2} alt={""} height={170} width={170} />
           </div>
         </div>
       </main>
