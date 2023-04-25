@@ -1,6 +1,9 @@
 import Footer from "@/components/Footer"
 import NavBar from "@/components/Navbar"
-import Avatar from "@/public/assets/avatar.jpg"
+import AboutPic from "@/public/assets/about-us.png"
+import Icon from "@/public/assets/icon.png"
+import Person1 from "@/public/assets/person1.png"
+import Person4 from "@/public/assets/person4.jpg"
 import Head from "next/head"
 import Image from "next/image"
 import { BsBookmarkPlus, BsFillBookmarkDashFill } from "react-icons/bs"
@@ -118,21 +121,21 @@ const FindJob = () => {
                 <div className="ml-10 h-12 border-l-2 border-gray-500"></div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full">
-                <Image
-                  src={Avatar}
-                  height={500}
-                  width={500}
-                  alt="Bolo"
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="font-bold">Berboss</div>
-                <div className="text-sm text-zinc-400">
-                  Douala Beedi, Next js, ID
-                </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full">
+              <Image
+                src={Person4}
+                height={500}
+                width={500}
+                alt="Bolo"
+                className="rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <div className="font-bold">Berboss</div>
+              <div className="text-sm text-zinc-400">
+                Douala Beedi, Next js, ID
               </div>
             </div>
           </div>

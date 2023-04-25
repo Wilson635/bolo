@@ -1,4 +1,4 @@
-import logo from "@/public/assets/bolo.png"
+// import {logo }from "/assets/bolo.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -11,13 +11,14 @@ const NavBar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
+
   return (
     <header>
       <div className="mx-auto max-w-7xl px-2 sm:px-4">
         <div className="flex h-16 justify-between">
           <div className="flex px-2 lg:px-0">
             <div className="flex shrink-0 items-center text-xl font-semibold tracking-tight">
-              <Image src={logo} width={50} height={50} alt={""} />
+              <Image src='/assets/bolo.png' width={50} height={50} alt={""} />
             </div>
             <div>
               {isOpen && (
