@@ -3,7 +3,7 @@ import NavBar from "@/components/Navbar"
 import AboutPic from "@/public/assets/about-us.png"
 import Icon from "@/public/assets/icon.png"
 import Person1 from "@/public/assets/person1.png"
-import Person4 from "@/public/assets/person4.jpg"
+// import Person4 from "@/public/assets/person4.jpg"
 import Head from "next/head"
 import Image from "next/image"
 import { BsBookmarkPlus, BsFillBookmarkDashFill } from "react-icons/bs"
@@ -125,7 +125,7 @@ const FindJob = () => {
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full">
               <Image
-                src={Person4}
+                src='/assets/person2.png'
                 height={500}
                 width={500}
                 alt="Bolo"
@@ -326,7 +326,7 @@ const FindJob = () => {
               <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl">
                   <Image
-                    src='/assets/bolo.png'
+                    src='/assets/person1.png'
                     height={500}
                     width={500}
                     alt="Bolo"
