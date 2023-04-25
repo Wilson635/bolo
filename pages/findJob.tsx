@@ -326,7 +326,7 @@ const FindJob = () => {
               <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl">
                   <Image
-                    src={Avatar}
+                    src='/assets/bolo.png'
                     height={500}
                     width={500}
                     alt="Bolo"
