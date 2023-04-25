@@ -3,19 +3,99 @@ import NavBar from "@/components/Navbar"
 import Avatar from "@/public/assets/avatar.jpg"
 import Head from "next/head"
 import Image from "next/image"
-import { BsFillBookmarkDashFill } from "react-icons/bs"
+import { BsBookmarkPlus, BsFillBookmarkDashFill } from "react-icons/bs"
 import {
   HiMagnifyingGlass,
   HiOutlineAdjustmentsHorizontal,
   HiOutlineBell,
   HiOutlineEnvelope,
 } from "react-icons/hi2"
+import { MdVerified } from "react-icons/md"
 
 const FindJob = () => {
+  const jobListings = [
+    {
+      id: 1,
+      company: "Hatypo Studio",
+      position: "UI Designer",
+      location: "Surakata, ID - Onsite",
+      bookmarkIcon: <BsFillBookmarkDashFill className="text-2xl" />,
+      rate: "$10/hour",
+      time: "Part-Time",
+      level: "Expert",
+      requirements:
+        "Strong passion and active in the social world with a track record in charity or volunteer work ...",
+      paymentVerified: {
+        label: "Payment verified",
+        value: "$10.000+ spent",
+        icon: <MdVerified />,
+      },
+      postedTime: "1h ago",
+      color: "bg-blue-500",
+    },
+    {
+      id: 2,
+      company: "Archo",
+      position: "UI Designer",
+      location: "Yogyakarta, ID - Onsite",
+      bookmarkIcon: <BsBookmarkPlus className="text-2xl" />,
+      rate: "$5/hour",
+      time: "Part-Time",
+      level: "Entry",
+      requirements:
+        "Bachelor's degree in Design, Visual Communication Design, Industrial Design, or any related field ...",
+      paymentVerified: {
+        label: "Payment verified",
+        value: "$300+ spent",
+        icon: <MdVerified />,
+      },
+      postedTime: "2h ago",
+      color: "bg-pink-500",
+    },
+    {
+      id: 3,
+      company: "Elux Space",
+      position: "Web Developper",
+      location: "Malang, ID - Onsite",
+      bookmarkIcon: <BsFillBookmarkDashFill className="text-2xl" />,
+      rate: "$15/hour",
+      time: "Part-Time",
+      level: "Expert",
+      requirements:
+        "Bachelor's degree in Design, Visual Communication Design, Industrial Design, or any related field ...",
+      paymentVerified: {
+        label: "Payment verified",
+        value: "$2.000+ spent",
+        icon: <MdVerified />,
+      },
+      postedTime: "3h ago",
+      color: "bg-yellow-300",
+    },
+    {
+      id: 4,
+      company: "Quanta Hive",
+      position: "UI/UX Designer",
+      location: "Douala, ID - Onsite",
+      bookmarkIcon: <BsFillBookmarkDashFill className="text-2xl" />,
+      rate: "$35/hour",
+      time: "Part-Time",
+      level: "Expert",
+      requirements:
+        "Strong passion and active in the social world with a track record in charity or volunteer work ...",
+      paymentVerified: {
+        label: "Payment verified",
+        value: "$18.000+ spent",
+        icon: <MdVerified />,
+      },
+      postedTime: "3h ago",
+      color: "bg-green-300",
+    },
+  ]
+
   return (
     <div>
       <Head>
-        <title>About | Bolo</title>
+        <title>Find Jobs | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -56,11 +136,53 @@ const FindJob = () => {
           </div>
         </div>
         <div className="mt-10 flex flex-row gap-5">
-          <div className="flex basis-2/5 flex-col bg-red-100">
+          <div className="flex basis-2/5 flex-col gap-4">
             <div className="flex items-center justify-between rounded-3xl bg-black p-3 px-6 text-white">
               <div className="font-semibold">Search Result</div>
-              <div className="text-sm text-neutral-400">16 Jobs Found</div>
+              <div className="text-sm text-neutral-400">
+                {jobListings.length} Jobs Found
+              </div>
             </div>
+            {jobListings.map((job) => (
+              <div
+                key={job.id}
+                className={`flex w-full flex-col gap-4 rounded-3xl bg-slate-100 p-5`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className={`h-20 w-20 rounded-3xl ${job.color}`}></div>
+                    <div className="flex flex-col">
+                      <h1 className="text-xl font-bold">{job.company}</h1>
+                      <h2 className="font-semibold">{job.position}</h2>
+                      <p className="text-slate-500">{job.location}</p>
+                    </div>
+                  </div>
+                  {job.bookmarkIcon}
+                </div>
+                <div className="flex flex-row gap-2">
+                  <div className="flex h-10 basis-1/3 items-center justify-center rounded-3xl bg-white font-semibold">
+                    {job.rate}
+                  </div>
+                  <div className="flex h-10 basis-1/3 items-center justify-center rounded-3xl bg-neutral-100 font-semibold">
+                    {job.time}
+                  </div>
+                  <div className="flex h-10 basis-1/3 items-center justify-center rounded-3xl bg-neutral-100 font-semibold">
+                    {job.level}
+                  </div>
+                </div>
+                <div className="text-slate-500">{job.requirements}</div>
+                <div className="-mb-2 border-b border-slate-500"></div>
+                <div className="mb-2 flex items-center justify-between">
+                  <div className="flex items-center gap-1">
+                    <h3 className="text-sm font-bold">
+                      {job.paymentVerified.label} {job.paymentVerified.value}
+                    </h3>
+                    {job.paymentVerified.icon}
+                  </div>
+                  <div className="text-slate-500">{job.postedTime}</div>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="flex basis-3/5 flex-col gap-4">
             <div className="flex w-full flex-row gap-3">
@@ -194,7 +316,51 @@ const FindJob = () => {
               </button>
             </div>
           </div>
-          <div className="flex basis-1/4 flex-col bg-red-100"></div>
+          <div className="flex basis-1/4 flex-col gap-4">
+            <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
+              <div className="flex h-20 w-20 items-center justify-center rounded-3xl">
+                <Image
+                  src={Avatar}
+                  height={500}
+                  width={500}
+                  alt="Bolo"
+                  className="rounded-3xl object-cover"
+                />
+              </div>
+              <div className="flex flex-col items-center">
+                <h1 className="text-xl font-bold">Rin Khimera</h1>
+                <h2 className="font-semibold">UI Designer</h2>
+                <p className="text-slate-400">Surakata, Central Java ID</p>
+              </div>
+              <button className="flex w-full items-center justify-center rounded-3xl bg-white p-3 font-semibold">
+                Edit Profile
+              </button>
+            </div>
+            <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
+              <div className="flex w-full flex-row items-center gap-3">
+                <div className="flex basis-1/2 flex-col items-center gap-3 rounded-3xl bg-white p-3 text-center">
+                  <h3 className="text-sm font-semibold">Search Result</h3>
+                  <h2 className="text-3xl font-bold">22</h2>
+                  <h3 className="font-semibold">Views</h3>
+                </div>
+                <div className="flex basis-1/2 flex-col items-center gap-3 rounded-3xl bg-white p-3 text-center">
+                  <h3 className="text-sm font-semibold">Applied Job</h3>
+                  <h2 className="text-3xl font-bold">12</h2>
+                  <h3 className="font-semibold">Job</h3>
+                </div>
+              </div>
+              <div className="flex w-full flex-col items-center gap-3 rounded-3xl bg-white p-3 text-center">
+                <h3 className="text-sm font-semibold">Post Views</h3>
+                <h2 className="text-3xl font-bold">268</h2>
+                <h3 className="font-semibold">Views</h3>
+              </div>
+              <div className="flex w-full flex-col items-center gap-3 rounded-3xl bg-white p-3 text-center">
+                <h3 className="text-sm font-semibold">Experience</h3>
+                <h2 className="text-3xl font-bold">5</h2>
+                <h3 className="font-semibold">Month</h3>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <Footer />
