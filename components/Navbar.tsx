@@ -70,7 +70,7 @@ const NavBar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/findJob" legacyBehavior>
                             <a className="block py-2">Find job</a>
                           </Link>
                         </li>
@@ -102,7 +102,9 @@ const NavBar = () => {
               <Link href="/about" legacyBehavior>
                 <a className="block py-2">About</a>
               </Link>
-              <a href="#">Find job</a>
+              <Link href="/findJob" legacyBehavior>
+                <a className="block py-2">Find job</a>
+              </Link>
               <a href="#">Post job</a>
             </div>
           </div>
