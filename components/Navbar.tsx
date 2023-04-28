@@ -17,7 +17,9 @@ const NavBar = () => {
         <div className="flex h-16 justify-between">
           <div className="flex px-2 lg:px-0">
             <div className="flex shrink-0 items-center text-xl font-semibold tracking-tight">
-              <Image src={logo} width={50} height={50} alt={""} />
+              <Link href="/">
+                <Image src={logo} width={50} height={50} alt={""} />
+              </Link>
             </div>
             <div>
               {isOpen && (
@@ -60,7 +62,7 @@ const NavBar = () => {
                     <nav className="mt-6">
                       <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800">
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/about" legacyBehavior>
                             <a className="block py-2">Home</a>
                           </Link>
                         </li>
@@ -98,7 +100,9 @@ const NavBar = () => {
               )}
             </div>
             <div className="hidden font-semibold lg:ml-10 lg:flex lg:items-center lg:space-x-6">
-              <a href="#">Home</a>
+              <Link href="/about" legacyBehavior>
+                <a className="block py-2">Home</a>
+              </Link>
               <Link href="/about" legacyBehavior>
                 <a className="block py-2">About</a>
               </Link>

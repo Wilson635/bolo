@@ -129,7 +129,7 @@ const FindJob = () => {
                 />
               </div>
               <div>
-                <div className="font-bold">Berboss</div>
+                <div className="font-bold">Rin Khimera</div>
                 <div className="text-sm text-zinc-400">
                   Douala Beedi, Next js, ID
                 </div>
