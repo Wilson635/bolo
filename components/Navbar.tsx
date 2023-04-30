@@ -108,7 +108,9 @@ const NavBar = () => {
               <Link href="/findJob" legacyBehavior>
                 <a className="block py-2">Find job</a>
               </Link>
-              <a href="#">Post job</a>
+              <Link href={'/postJob'} legacyBehavior>
+                <a className="block py-2">Post job</a>
+              </Link>
             </div>
           </div>
           <div className="flex flex-1 items-center justify-center px-2 lg:ml-6 lg:justify-end">
