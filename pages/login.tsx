@@ -19,7 +19,7 @@ const SignIn = () => {
         <title>Sign In | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="min-h-screen lg:flex lg:flex-row">
         <div className="flex min-h-screen flex-col justify-center lg:w-auto lg:basis-1/2">

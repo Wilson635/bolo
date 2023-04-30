@@ -101,7 +101,7 @@ const FindJob = () => {
         <title>Find Jobs | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
       <div className="mx-auto flex flex-col">
         <NavBar />

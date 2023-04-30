@@ -19,7 +19,7 @@ export default function PostJob() {
             <img src='/assets/person2.png' alt='bolo' />
         </ReactSlidy>
         {/* <!-- ====== Form Elements Section Start --> */}
-        <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
+        <section className="pt-20 pb-10 mx-10 lg:pt-[120px] lg:pb-20">
             <div className="container mx-auto">
                 <div className="-mx-4 flex flex-wrap">
                     <div className="w-full px-4 md:w-1/2 lg:w-1/3">

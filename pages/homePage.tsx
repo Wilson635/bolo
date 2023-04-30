@@ -14,7 +14,7 @@ export default function HomePage() {
             {/* -- category start -- */}
             <div className="bg-white">
                 <div className="text-center">
-                    <h3 className="text-xl font-bold tracking-tight text-gray-900 py-12 sm:text-4xl">
+                    <h3 className="text-4xl font-bold tracking-tight text-gray-900 py-12 sm:text-5xl lg:text-6xl">
                         One Platform <br/>
                         Many <span className="text-blue-500">Solutions</span>
                     </h3>
@@ -223,7 +223,7 @@ export default function HomePage() {
             {/* -- category end -- */}
 
             {/* -- upload cv start -- */}
-            <div className="bg-white mt-8">
+            <div className="bg-white m-8">
                 <div className="mx-auto max-w-7xl px-8 md:px-6 bg-blue-500 rounded-[25px]">
                     <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:gap-10">
                         <div className="w-full h-full">
