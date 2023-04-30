@@ -61,7 +61,7 @@ const NavBar = () => {
                     <nav className="mt-6">
                       <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800">
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/HomePage" legacyBehavior>
                             <a className="block py-2">Home</a>
                           </Link>
                         </li>
@@ -99,7 +99,9 @@ const NavBar = () => {
               )}
             </div>
             <div className="hidden font-semibold lg:ml-10 lg:flex lg:items-center lg:space-x-6">
-              <a href="#">Home</a>
+              <Link href="/homePage" legacyBehavior>
+                <a className="block py-2">Home</a>
+              </Link>
               <Link href="/about" legacyBehavior>
                 <a className="block py-2">About</a>
               </Link>
