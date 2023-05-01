@@ -1,27 +1,24 @@
+import React from 'react'
+import { useState } from 'react'
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci"
 import Input from "@/components/Input"
 import bgImage from "@/public/assets/bg.jpg"
 import logo from "@/public/assets/bolo.png"
-import google from "@/public/google.svg"
-import linkedin from "@/public/linkedin.svg"
+import google from "@/public/assets/google.svg"
+import linkedin from "@/public/assets/linkedin.svg"
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
-import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci"
+
 
 const SignUp = () => {
   const [email, setEmail] = useState("")
   const [name, setName] = useState("")
   const [password, setPassword] = useState("")
 
-  return (
+  return(
     <div>
-      <Head>
-        <title>Sign Up | Bolo</title>
-        <meta name="description" content="Bolo - Find your dream job" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-      </Head>
+      <span> Sign Up | Bolo </span>
       <div className="min-h-screen lg:flex lg:flex-row">
         <div className="flex min-h-screen flex-col justify-center lg:w-auto lg:basis-1/2">
           <form
@@ -29,6 +26,7 @@ const SignUp = () => {
             method="POST"
             className="relative mx-auto w-full max-w-lg rounded-lg p-5 lg:max-w-md"
           >
+            
             <div className="flex justify-center">
               <Image src={logo} width={75} height={75} alt={""} />
             </div>
