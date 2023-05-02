@@ -77,7 +77,7 @@ interface MyFormValues {
 export const PostJob: React.FC<{}> = () => {
 
   const initialValues: MyFormValues = { 
-    companyName: '', 
+    companyName: "", 
     companyWebsite:"",
     companyEmail:"" ,
     jobDescription:"",
@@ -107,9 +107,7 @@ export const PostJob: React.FC<{}> = () => {
            console.log({ values, actions });
            alert(JSON.stringify(values, null, 2));
            actions.setSubmitting(false);
-
          }}
-        
       >
         {({ errors, touched }) => (
 
