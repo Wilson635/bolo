@@ -3,21 +3,9 @@ import NavBar from "@/components/Navbar"
 import Image1 from "@/public/assets/image-1.jpg"
 import Head from "next/head"
 import Image from "next/image"
-import { useState } from "react"
-import { ImQuotesLeft } from "react-icons/im"
 import { RiDoubleQuotesL } from "react-icons/ri"
 import { TbCircleArrowRightFilled } from "react-icons/tb"
 const Testimony = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  const handleNext = () => {
-    setCurrentIndex((currentIndex + 1) % dataArray.length)
-  }
-
-  const handlePrevious = () => {
-    setCurrentIndex((currentIndex - 1 + dataArray.length) % dataArray.length)
-  }
-
   const dataArray = [
     {
       id: 1,
@@ -25,7 +13,7 @@ const Testimony = () => {
       name: "Michael",
       company: "MDS Manufacturing",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt Itaque sint, a eos.",
     },
     {
       id: 2,
@@ -33,7 +21,7 @@ const Testimony = () => {
       name: "John",
       company: "ABC Corporation",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
+        "Eveniet, maxime nulla qui quas consectetur, ullam, perspiciatis nam saepe laboriosam molestias excepturi dignissimos cumque molestiae?",
     },
     {
       id: 3,
@@ -41,7 +29,7 @@ const Testimony = () => {
       name: "Sarah",
       company: "XYZ Industries",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
+        "Officiis, harum doloremque. Itaque sint, a eos praesentium temporibus perferendis maxime deserunt quidem cum sed nostrum.",
     },
     // Ajouter plus d'objets si nécessaire
   ]
@@ -49,13 +37,13 @@ const Testimony = () => {
   return (
     <div>
       <Head>
-        <title>About | Bolo</title>
+        <title>Testimonials | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main className="mt-28">
+      <main className="mb-20 mt-28">
         <div className="relative flex flex-col bg-blue-800 md:mx-10">
           <div className="mx-auto -mt-24 flex h-44 w-44 items-center justify-center rounded-full bg-blue-400 md:ml-20">
             <RiDoubleQuotesL className="text-8xl text-white" />

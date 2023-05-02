@@ -1,4 +1,4 @@
-// import {logo }from "/assets/bolo.png"
+import Logo from "@/public/assets/bolo.png"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -18,7 +18,9 @@ const NavBar = () => {
         <div className="flex h-16 justify-between">
           <div className="flex px-2 lg:px-0">
             <div className="flex shrink-0 items-center text-xl font-semibold tracking-tight">
-              <Image src="/assets/bolo.png" width={50} height={50} alt={""} />
+              <Link href="/homePage">
+                <Image src={Logo} width={40} height={40} alt={""} />
+              </Link>
             </div>
             <div>
               {isOpen && (
