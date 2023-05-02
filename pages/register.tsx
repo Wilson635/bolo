@@ -2,13 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci"
 import Input from "@/components/Input"
-import bgImage from "@/public/assets/bg.jpg"
-import logo from "@/public/assets/bolo.png"
-import google from "@/public/assets/google.svg"
-import linkedin from "@/public/assets/linkedin.svg"
-import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
+import Head from "next/head"
 
 
 const SignUp = () => {
@@ -18,7 +14,12 @@ const SignUp = () => {
 
   return(
     <div>
-      <span> Sign Up | Bolo </span>
+       <Head>
+        <title>Sign In | Bolo</title>
+        <meta name="description" content="Bolo - Find your dream job" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+      </Head>
       <div className="min-h-screen lg:flex lg:flex-row">
         <div className="flex min-h-screen flex-col justify-center lg:w-auto lg:basis-1/2">
           <form
@@ -28,7 +29,7 @@ const SignUp = () => {
           >
             
             <div className="flex justify-center">
-              <Image src={logo} width={75} height={75} alt={""} />
+              <Image src="/assets/bolo.png" width={75} height={75} alt={""} />
             </div>
             <div className="grid gap-y-4">
               <div>
@@ -83,7 +84,7 @@ const SignUp = () => {
                           rounded-md px-3.5 py-2 font-semibold text-black shadow-sm
                           ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
-                  <Image src={linkedin} alt={""} className="-mr-2 h-7 w-7" />
+                  <img src="/assets/linkedin.svg" alt={""} className="-mr-2 h-7 w-7" />
                   <p className="flex-grow text-center text-lg">
                     Sign up with LinkedIn
                   </p>
@@ -96,7 +97,7 @@ const SignUp = () => {
                           rounded-md px-3.5 py-2 font-semibold text-black shadow-sm
                           ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
-                  <Image src={google} alt={""} className="-mr-2 h-7 w-7" />
+                  <img src="/assets/google.svg" alt={""} className="-mr-2 h-7 w-7" />
                   <p className="flex-grow text-center text-lg">
                     Sign up with Google
                   </p>
@@ -116,7 +117,8 @@ const SignUp = () => {
         <div
           className="hidden bg-cover lg:block lg:basis-1/2"
           style={{
-            backgroundImage: `url(${bgImage.src})`,
+            // backgroundImage: `url(${bgImage.src})`,
+            backgroundImage: "url(/assets/bg.jpg)"
           }}
         >
           <div className="flex h-full flex-col items-center justify-between py-10 text-white">
