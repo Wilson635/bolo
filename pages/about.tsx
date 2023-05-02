@@ -13,10 +13,10 @@ const About = () => {
         <title>About | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main className="mx-auto my-5 max-w-7xl px-5">
+      <main className="mx-auto my-20 max-w-7xl px-5">
         <div className="grid gap-5 rounded-2xl bg-slate-200 pt-20">
           <h1 className="text-center text-5xl font-semibold">
             We&apos;re changing the whole game

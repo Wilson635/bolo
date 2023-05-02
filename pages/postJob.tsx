@@ -1,97 +1,98 @@
-import Footer from '@/components/Footer'
-import NavBar from '@/components/Navbar'
-import { Inter } from 'next/font/google'
-import ReactSlidy from 'react-slidy'
-import person from '/assets/person1.png'
-import 'react-slidy/lib/styles.css'
+import Footer from "@/components/Footer"
+import NavBar from "@/components/Navbar"
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik"
+import { Inter } from "next/font/google"
+import Head from "next/head"
 import Image from "next/image"
-import * as Yup from 'yup';
-import { Form , Field , Formik , ErrorMessage, FormikHelpers} from 'formik';
-import React from 'react'
-import Head from 'next/head'
+import React from "react"
+import ReactSlidy from "react-slidy"
+import "react-slidy/lib/styles.css"
+import * as Yup from "yup"
+import person from "/assets/person1.png"
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] })
 
 interface MyFormValues {
-  companyName: string;
-  companyWebsite: string;
-  companyEmail: string;
-  jobTitle: string;
-  jobType: string;
-  Qualification: string;
-  jobDescription: string;
-  experience: string;
-  salaryRange: string;
-  jobCategory: string;
-  jobLocation: string;
+  companyName: string
+  companyWebsite: string
+  companyEmail: string
+  jobTitle: string
+  jobType: string
+  Qualification: string
+  jobDescription: string
+  experience: string
+  salaryRange: string
+  jobCategory: string
+  jobLocation: string
 }
 
-
-  const postJobSchema = Yup.object().shape({
-      companyName: Yup.string()
-          .required('Please enter a valid company name')
-          .min(5,'please enter at least 05 characters')
-          .max(50,'You should not pass 50 characters'),
-      companyWebsite: Yup.string()
-          .required('Please enter a valid company name')
-          .min(10,'please enter at least 03 characters')
-          .max(50,'You should not pass 50 characters'),
-      companyEmail: Yup.string()
-        .email('Invalid email')
-        .required('Required'),
-      jobTitle: Yup.string()
-        .required('Please enter a valid company name')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      jobType: Yup.string()
-        .required('Please enter a valid company name')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      jobCategory: Yup.string()
-        .required('Please enter a valid company name')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      jobLocation: Yup.string()
-        .required('Please enter a valid company name')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      salaryRange: Yup.string()
-        .required('Please enter a valid salary range')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      experience: Yup.string()
-        .required('Please enter a valid experience')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      Qualification: Yup.string()
-        .required('Please enter a valid qualification')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
-      jobDescription: Yup.string()
-        .required('Please enter a valid job description')
-        .min(5,'please enter at least 05 characters')
-        .max(50,'You should not pass 50 characters'),
+const postJobSchema = Yup.object().shape({
+  companyName: Yup.string()
+    .required("Please enter a valid company name")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  companyWebsite: Yup.string()
+    .required("Please enter a valid company name")
+    .min(10, "please enter at least 03 characters")
+    .max(50, "You should not pass 50 characters"),
+  companyEmail: Yup.string().email("Invalid email").required("Required"),
+  jobTitle: Yup.string()
+    .required("Please enter a valid company name")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  jobType: Yup.string()
+    .required("Please enter a valid company name")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  jobCategory: Yup.string()
+    .required("Please enter a valid company name")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  jobLocation: Yup.string()
+    .required("Please enter a valid company name")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  salaryRange: Yup.string()
+    .required("Please enter a valid salary range")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  experience: Yup.string()
+    .required("Please enter a valid experience")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  Qualification: Yup.string()
+    .required("Please enter a valid qualification")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
+  jobDescription: Yup.string()
+    .required("Please enter a valid job description")
+    .min(5, "please enter at least 05 characters")
+    .max(50, "You should not pass 50 characters"),
 })
 
 export const PostJob: React.FC<{}> = () => {
-
-  const initialValues: MyFormValues = { 
-    companyName: "", 
-    companyWebsite:"",
-    companyEmail:"" ,
-    jobDescription:"",
-    Qualification:"",
-    salaryRange:"",
-    jobTitle:"",
-    jobType:"",
-    experience:"",
-    jobCategory:"",
-    jobLocation:""
-  };
+  const initialValues: MyFormValues = {
+    companyName: "",
+    companyWebsite: "",
+    companyEmail: "",
+    jobDescription: "",
+    Qualification: "",
+    salaryRange: "",
+    jobTitle: "",
+    jobType: "",
+    experience: "",
+    jobCategory: "",
+    jobLocation: "",
+  }
 
   return (
     <>
+      <Head>
+        <title>Post Jobs | Bolo</title>
+        <meta name="description" content="Bolo - Find your dream job" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <NavBar />
       <ReactSlidy fullHeight imageObjectFit="contain" useFullWidth={false}>
         <Image src="/assets/person0.png" alt="bolo" width={400} height={400} />
@@ -107,7 +108,9 @@ export const PostJob: React.FC<{}> = () => {
            console.log({ values, actions });
            alert(JSON.stringify(values, null, 2));
            actions.setSubmitting(false);
+
          }}
+        
       >
         {({ errors, touched }) => (
 
@@ -275,46 +278,48 @@ export const PostJob: React.FC<{}> = () => {
                     <button 
                         type="submit"
                         className="
-                              w-24
                               text-body-color
-                              p-2
-                              bg-blue-500
-                              active:bg-blue-300
-                              hover:bg-blue-400 
-                              text-gray-800
+                              w-24
                               rounded-md
+                              bg-blue-500
+                              p-2
+                              text-gray-800 
+                              hover:bg-blue-400
+                              active:bg-blue-300
                                 "
-                        >Submit
-                    </button>
-                  </div>
-                  <div className='mx-auto'>
-                    <button 
+                      >
+                        Submit
+                      </button>
+                    </div>
+                    <div className="mx-auto">
+                      <button
                         type="submit"
                         className="
-                                w-24
                                 text-body-color
-                                p-2
-                                bg-red-500
-                                active:bg-red-300
-                                hover:bg-red-400 
-                                text-gray-800
+                                w-24
                                 rounded-md
+                                bg-red-500
+                                p-2
+                                text-gray-800 
+                                hover:bg-red-400
+                                active:bg-red-300
                                 
                                 "
-                        >Cancel
-                    </button>
+                      >
+                        Cancel
+                      </button>
+                    </div>
                   </div>
-               </div> 
-          </div>
-      </section>
-    </Form>
-    )}
-    </Formik>
-      {/* <!-- ====== Form Elements Section End --> */}
+                </div>
+              </section>
+            </Form>
+          )}
+        </Formik>
+        {/* <!-- ====== Form Elements Section End --> */}
+      </main>
       <Footer />
     </>
-  );
+  )
 }
 
-
-export default PostJob;
+export default PostJob
