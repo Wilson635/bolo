@@ -4,11 +4,13 @@ import About from "./about"
 import FindJob from "./findJob"
 import SignIn from "./login"
 import SignUp from "./register"
+import HomePage from "./homePage"
+
 
 const Home = () => {
   return (
     <div>
-      <FindJob />
+      <HomePage />
     </div>
   )
 }

@@ -1,6 +1,9 @@
 import Footer from "@/components/Footer"
 import NavBar from "@/components/Navbar"
-import Avatar from "@/public/assets/avatar.jpg"
+import AboutPic from "@/public/assets/about-us.png"
+import Icon from "@/public/assets/icon.png"
+import Person1 from "@/public/assets/person1.png"
+// import Person4 from "@/public/assets/person4.jpg"
 import Head from "next/head"
 import Image from "next/image"
 import { BsBookmarkPlus, BsFillBookmarkDashFill } from "react-icons/bs"
@@ -102,7 +105,7 @@ const FindJob = () => {
       </Head>
       <div className="mx-auto flex flex-col">
         <NavBar />
-        <main className="mx-auto my-5 max-w-7xl px-5">
+        <main className="mx-auto my-20 max-w-7xl px-5">
           <div className="flex justify-between">
             <div className="flex w-4/5 items-center justify-between">
               <div className="text-3xl font-bold">
@@ -118,21 +121,21 @@ const FindJob = () => {
                 <div className="ml-10 h-12 border-l-2 border-gray-500"></div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full">
-                <Image
-                  src={Avatar}
-                  height={500}
-                  width={500}
-                  alt="Bolo"
-                  className="rounded-full object-cover"
-                />
-              </div>
-              <div>
-                <div className="font-bold">Rin Khimera</div>
-                <div className="text-sm text-zinc-400">
-                  Douala Beedi, Next js, ID
-                </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full">
+              <Image
+                src="/assets/person2.png"
+                height={500}
+                width={500}
+                alt="Bolo"
+                className="rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <div className="font-bold">Berboss</div>
+              <div className="text-sm text-zinc-400">
+                Douala Beedi, Next js, ID
               </div>
             </div>
           </div>
@@ -323,7 +326,7 @@ const FindJob = () => {
               <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl">
                   <Image
-                    src={Avatar}
+                    src="/assets/person1.png"
                     height={500}
                     width={500}
                     alt="Bolo"

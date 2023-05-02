@@ -1,8 +1,8 @@
 import Input from "@/components/Input"
 import bgImage from "@/public/assets/bg.jpg"
 import logo from "@/public/assets/bolo.png"
-import google from "@/public/google.svg"
-import linkedin from "@/public/linkedin.svg"
+import google from "@/public/assets/google.svg"
+import linkedin from "@/public/assets/linkedin.svg"
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
@@ -35,7 +35,9 @@ const SignIn = () => {
             </div>
             <div className="grid gap-y-4">
               <div>
-                <h1 className="text-center text-4xl font-bold">Login</h1>
+                <h1 className="text:base text-center text-4xl font-bold">
+                  Login
+                </h1>
               </div>
               <div>
                 <Input
@@ -74,8 +76,14 @@ const SignIn = () => {
                   className="flex h-12 w-full items-center justify-center
                              rounded-md px-3.5 py-2 font-semibold text-black shadow-sm ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
-                  <Image src={linkedin} alt={""} className="-mr-2 h-7 w-7" />
-                  <p className="flex-grow text-center text-lg">
+                  <Image
+                    src={linkedin}
+                    alt={""}
+                    width={100}
+                    height={100}
+                    className="-mr-2 h-7 w-7"
+                  />
+                  <p className="flex-grow text-sm md:text-base lg:text-lg">
                     Sign in with LinkedIn
                   </p>
                 </button>
@@ -87,7 +95,8 @@ const SignIn = () => {
                              rounded-md px-3.5 py-2 font-semibold text-black shadow-sm ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
                   <Image src={google} alt={""} className="-mr-2 h-7 w-7" />
-                  <p className="flex-grow text-center text-lg">
+                  {/* <p className="flex-grow text-center text-lg"> */}
+                  <p className="flex-grow text-sm md:text-base lg:text-lg">
                     Sign in with Google
                   </p>
                 </button>

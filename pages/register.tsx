@@ -1,12 +1,8 @@
 import Input from "@/components/Input"
-import bgImage from "@/public/assets/bg.jpg"
-import logo from "@/public/assets/bolo.png"
-import google from "@/public/google.svg"
-import linkedin from "@/public/linkedin.svg"
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import React, { useState } from "react"
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci"
 
 const SignUp = () => {
@@ -30,9 +26,7 @@ const SignUp = () => {
             className="relative mx-auto w-full max-w-lg rounded-lg p-5 lg:max-w-md"
           >
             <div className="flex justify-center">
-              <Link href="/">
-                <Image src={logo} width={75} height={75} alt={""} />
-              </Link>
+              <Image src="/assets/bolo.png" width={75} height={75} alt={""} />
             </div>
             <div className="grid gap-y-4">
               <div>
@@ -87,7 +81,11 @@ const SignUp = () => {
                           rounded-md px-3.5 py-2 font-semibold text-black shadow-sm
                           ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
-                  <Image src={linkedin} alt={""} className="-mr-2 h-7 w-7" />
+                  <img
+                    src="/assets/linkedin.svg"
+                    alt={""}
+                    className="-mr-2 h-7 w-7"
+                  />
                   <p className="flex-grow text-center text-lg">
                     Sign up with LinkedIn
                   </p>
@@ -100,7 +98,11 @@ const SignUp = () => {
                           rounded-md px-3.5 py-2 font-semibold text-black shadow-sm
                           ring-1 ring-gray-300 transition hover:bg-slate-300"
                 >
-                  <Image src={google} alt={""} className="-mr-2 h-7 w-7" />
+                  <img
+                    src="/assets/google.svg"
+                    alt={""}
+                    className="-mr-2 h-7 w-7"
+                  />
                   <p className="flex-grow text-center text-lg">
                     Sign up with Google
                   </p>
@@ -120,7 +122,8 @@ const SignUp = () => {
         <div
           className="hidden bg-cover lg:block lg:basis-1/2"
           style={{
-            backgroundImage: `url(${bgImage.src})`,
+            // backgroundImage: `url(${bgImage.src})`,
+            backgroundImage: "url(/assets/bg.jpg)",
           }}
         >
           <div className="flex h-full flex-col items-center justify-between py-10 text-white">
