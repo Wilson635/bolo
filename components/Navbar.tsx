@@ -18,7 +18,7 @@ const NavBar = () => {
         <div className="flex h-16 justify-between">
           <div className="flex px-2 lg:px-0">
             <div className="flex shrink-0 items-center text-xl font-semibold tracking-tight">
-              <Image src='/assets/bolo.png' width={50} height={50} alt={""} />
+              <Image src="/assets/bolo.png" width={50} height={50} alt={""} />
             </div>
             <div>
               {isOpen && (
@@ -76,17 +76,17 @@ const NavBar = () => {
                           </Link>
                         </li>
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/postJob" legacyBehavior>
                             <a className="block py-2">Post job</a>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/login" legacyBehavior>
                             <a className="block py-2 font-bold">Login</a>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/" legacyBehavior>
+                          <Link href="/register" legacyBehavior>
                             <a className="block py-2 font-bold">
                               Create an account
                             </a>
@@ -108,7 +108,7 @@ const NavBar = () => {
               <Link href="/findJob" legacyBehavior>
                 <a className="block py-2">Find job</a>
               </Link>
-              <Link href={'/postJob'} legacyBehavior>
+              <Link href="/postJob" legacyBehavior>
                 <a className="block py-2">Post job</a>
               </Link>
             </div>
@@ -119,17 +119,17 @@ const NavBar = () => {
                 Search
               </label>
               <div className="relative">
-                <div
-                  className="border-skin-base text-skin-base bg-skin-body text-skin-muted group-hover:bg-skin-card-gray w-full rounded-md
-                             border py-2 pl-4 pr-12 text-sm
-                             font-normal leading-5"
-                >
+                <div className="border-skin-base text-skin-base bg-skin-body text-skin-muted group-hover:bg-skin-card-gray w-full rounded-md border py-2 pl-4 pr-12 text-sm font-normal leading-5">
                   Search...
                 </div>
-                <div className="pointer-events-none absolute inset-y-0 right-0 flex py-1.5 pr-2">
+                <div
+                  className="pointer-events-none absolute inset-y-0
+                             right-0 flex py-1.5 pr-2"
+                >
                   <kbd
-                    className="border-skin-base text-skin-muted inline-flex items-center rounded
-                                border px-2 font-sans text-sm font-medium"
+                    className="border-skin-base text-skin-muted
+                    inline-flex items-center rounded border px-2
+                    font-sans text-sm font-medium"
                   >
                     <HiMagnifyingGlass />
                   </kbd>
