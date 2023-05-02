@@ -6,6 +6,7 @@ import Image from "next/image"
 import { useState } from "react"
 import { ImQuotesLeft } from "react-icons/im"
 import { RiDoubleQuotesL } from "react-icons/ri"
+import { TbCircleArrowRightFilled } from "react-icons/tb"
 const Testimony = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -34,15 +35,15 @@ const Testimony = () => {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
     },
-    // {
-    //   id: 3,
-    //   imageSrc: Image1,
-    //   name: "Sarah",
-    //   company: "XYZ Industries",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
-    // },
-    // Add more objects as needed
+    {
+      id: 3,
+      imageSrc: Image1,
+      name: "Sarah",
+      company: "XYZ Industries",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nulla quis earum deserunt.",
+    },
+    // Ajouter plus d'objets si nécessaire
   ]
 
   return (
@@ -71,7 +72,10 @@ const Testimony = () => {
                 minus laboriosam vel ad! A amet nisi atque qui eveniet eos
                 obcaecati vero.
               </p>
-              <div className="text-2xl font-semibold">Connect now</div>
+              <button className="flex items-center justify-center gap-2 text-2xl font-semibold hover:underline lg:justify-start">
+                <div>Connect now</div>
+                <TbCircleArrowRightFilled />
+              </button>
             </div>
             <div className="flex flex-col gap-3 lg:flex-row">
               {dataArray.map((data) => (

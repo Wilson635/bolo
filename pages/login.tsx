@@ -16,7 +16,7 @@ const SignIn = () => {
   return (
     <div>
       <Head>
-        <title>Sign In | Bolo</title>
+        <title>Testimony | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
@@ -29,11 +29,13 @@ const SignIn = () => {
             className="relative mx-auto w-full max-w-lg rounded-lg p-5 lg:max-w-md"
           >
             <div className="flex justify-center">
-              <Image src={logo} width={75} height={75} alt={""}  />
+              <Image src={logo} width={75} height={75} alt={""} />
             </div>
             <div className="grid gap-y-4">
               <div>
-                <h1 className="text-center text-4xl font-bold text:base">Login</h1>
+                <h1 className="text:base text-center text-4xl font-bold">
+                  Login
+                </h1>
               </div>
               <div>
                 <Input
@@ -142,7 +144,7 @@ const SignIn = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default SignIn
