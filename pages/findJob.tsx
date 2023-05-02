@@ -101,11 +101,11 @@ const FindJob = () => {
         <title>Find Jobs | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="mx-auto flex flex-col">
         <NavBar />
-        <main className="mx-auto my-5 max-w-7xl px-5">
+        <main className="mx-auto my-20 max-w-7xl px-5">
           <div className="flex justify-between">
             <div className="flex w-4/5 items-center justify-between">
               <div className="text-3xl font-bold">
@@ -125,7 +125,7 @@ const FindJob = () => {
           <div className="flex items-center gap-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-full">
               <Image
-                src='/assets/person2.png'
+                src="/assets/person2.png"
                 height={500}
                 width={500}
                 alt="Bolo"
@@ -326,7 +326,7 @@ const FindJob = () => {
               <div className="flex w-full flex-col items-center gap-4 rounded-3xl bg-slate-100 p-5">
                 <div className="flex h-20 w-20 items-center justify-center rounded-3xl">
                   <Image
-                    src='/assets/person1.png'
+                    src="/assets/person1.png"
                     height={500}
                     width={500}
                     alt="Bolo"
