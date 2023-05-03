@@ -84,7 +84,7 @@ const NavBar = () => {
                         </li>
                         <li>
                           <Link href="/login" legacyBehavior>
-                            <a className="block py-2 font-bold">Login</a>
+                            <a className="block py-2 font-bold animate-ping rounded-full bg-sky-400 opacity-75">Login</a>
                           </Link>
                         </li>
                         <li>

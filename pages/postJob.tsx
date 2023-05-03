@@ -9,6 +9,7 @@ import ReactSlidy from "react-slidy"
 import "react-slidy/lib/styles.css"
 import * as Yup from "yup"
 import person from "/assets/person1.png"
+import AutoplaySlider from "@/components/test"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -95,7 +96,7 @@ export const PostJob: React.FC<{}> = () => {
       </Head>
       <NavBar />
       <main className="my-20">
-        <ReactSlidy fullHeight imageObjectFit="contain" useFullWidth={false}>
+        {/* <ReactSlidy fullHeight imageObjectFit="contain" useFullWidth={false}>
           <Image
             src="/assets/person0.png"
             alt="bolo"
@@ -120,7 +121,8 @@ export const PostJob: React.FC<{}> = () => {
             width={400}
             height={400}
           />
-        </ReactSlidy>
+        </ReactSlidy> */}
+        <AutoplaySlider />
         {/* <!-- ====== Form Elements Section Start --> */}
         <Formik
           initialValues={initialValues}
