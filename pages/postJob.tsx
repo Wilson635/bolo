@@ -70,7 +70,7 @@ const postJobSchema = Yup.object().shape({
     .max(50, "You should not pass 50 characters"),
 })
 
-export const PostJob: React.FC<{}> = () => {
+export  const PostJob = () => {
   const initialValues: MyFormValues = {
     companyName: "",
     companyWebsite: "",
@@ -94,188 +94,238 @@ export const PostJob: React.FC<{}> = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <ReactSlidy fullHeight imageObjectFit="contain" useFullWidth={false}>
-        <Image src="/assets/person0.png" alt="bolo" width={400} height={400} />
-        <Image src="/assets/person5.png" alt="bolo" width={400} height={400} />
-        <Image src="/assets/person0.png" alt="bolo" width={400} height={400} />
-        <Image src="/assets/person5.png" alt="bolo" width={400} height={400} />
-      </ReactSlidy>
-      {/* <!-- ====== Form Elements Section Start --> */}
-      <Formik 
-        initialValues={initialValues}
-        validationSchema={postJobSchema}
-         onSubmit={(values, actions) => {
-           console.log({ values, actions });
-           alert(JSON.stringify(values, null, 2));
-           actions.setSubmitting(false);
+      <main className="my-20">
+        <ReactSlidy fullHeight imageObjectFit="contain" useFullWidth={false}>
+          <Image
+            src="/assets/person0.png"
+            alt="bolo"
+            width={400}
+            height={400}
+          />
+          <Image
+            src="/assets/person5.png"
+            alt="bolo"
+            width={400}
+            height={400}
+          />
+          <Image
+            src="/assets/person0.png"
+            alt="bolo"
+            width={400}
+            height={400}
+          />
+          <Image
+            src="/assets/person5.png"
+            alt="bolo"
+            width={400}
+            height={400}
+          />
+        </ReactSlidy>
+        {/* <!-- ====== Form Elements Section Start --> */}
+        <Formik
+          initialValues={initialValues}
+          validationSchema={postJobSchema}
+          onSubmit={(values, actions) => {
+            console.log({ values, actions })
+            alert(JSON.stringify(values, null, 2))
+            actions.setSubmitting(false)
+          }}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <section className="mx-10 pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
+                <div className="p-15 container mx-auto">
+                  <h1 className="text-2xl font-medium uppercase">
+                    Fill this formular
+                  </h1>
+                  <div className="mb-10 mt-1 h-1 w-20 bg-blue-500"></div>
+                  <div className="-mx-4 flex flex-wrap">
+                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Company Name
+                        </label>
+                        <Field
+                          id="companyName"
+                          name="companyName"
+                          placeholder="Beyond technologies"
+                          className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.companyName && touched.companyName ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.companyName}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Company Website
+                        </label>
+                        <Field
+                          id="companyWebsite"
+                          name="companyWebsite"
+                          placeholder="www.beyondtechsarl.com"
+                          className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.companyWebsite && touched.companyWebsite ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.companyWebsite}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Company Email
+                        </label>
+                        <Field
+                          id="companyEmail"
+                          name="companyEmail"
+                          placeholder="beyondtechsarl@gmail.com"
+                          className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.companyEmail && touched.companyEmail ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.companyEmail}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
 
-         }}
-        
-      >
-        {({ errors, touched }) => (
-
-          <Form>
-
-      <section className="mx-10 pb-10 pt-20 lg:pb-20 lg:pt-[120px]">
-      
-        <div className="container mx-auto p-15">
-        <h1 className="text-2xl font-medium uppercase">Fill this formular</h1>
-        <div className="bg-blue-500 w-20 h-1 mt-1 mb-10"></div>
-          <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Company Name
-                </label>
-                <Field 
-                  id="companyName" 
-                  name="companyName" 
-                  placeholder="Beyond technologies" 
-                  className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                  />
-                  {errors.companyName && touched.companyName ? (<div className='text-red-700 p-1 font-semibold'>{errors.companyName}</div>) : null}
-                  <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Company Website
-                </label>
-                <Field 
-                  id="companyWebsite" 
-                  name="companyWebsite" 
-                  placeholder="www.beyondtechsarl.com" 
-                  className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                  />
-                  {errors.companyWebsite && touched.companyWebsite ? (<div className='text-red-700 p-1 font-semibold'>{errors.companyWebsite}</div>) : null}
-                  <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Company Email
-                </label>
-                <Field 
-                  id="companyEmail" 
-                  name="companyEmail" 
-                  placeholder="beyondtechsarl@gmail.com" 
-                  className="border-form-stroke text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                  />
-                  {errors.companyEmail && touched.companyEmail ? (<div className='text-red-700 font-semibold p-1'>{errors.companyEmail}</div>) : null}
-                  <ErrorMessage name="name" />
-              </div>
-            </div>
-            
-            <div className="w-full px-4 lg:w-6/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Job Category
-                </label>
-                <div className="relative">
-                  <select className="border-form-stroke text-body-color focus:border-primary active:border-primary w-full appearance-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]">
-                    <option value="">Technology</option>
-                    <option value="">Design</option>
-                    <option value="">Marketing</option>
-                    <option value="">Trading</option>
-                    <option value="">Agriculture</option>
-                  </select>
-                  <span className="border-body-color absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b-2 border-r-2"></span>
-                </div>
-              </div>
-            </div>
-            <div className="w-full px-4 lg:w-6/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Job Type
-                </label>
-                <div className="relative">
-                  <select className="border-form-stroke text-body-color focus:border-primary active:border-primary w-full appearance-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]">
-                    <option value="">Full Time</option>
-                    <option value="">Part Time</option>
-                    <option value="">Week Time</option>
-                    <option value="">Season Time</option>
-                    <option value="">Evening Time</option>
-                  </select>
-                  <span className="border-body-color absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b-2 border-r-2"></span>
-                </div>
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-8/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Job Location
-                </label>
-                <input
-                  type="text"
-                  placeholder="Location"
-                  className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                />
-              {errors.Qualification && touched.Qualification ? (<div className='text-red-700 p-1 font-semibold'>{errors.Qualification}</div>) : null}
-              <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-black">
-                  Salary Range
-                </label>
-                <input
-                  type="text"
-                  placeholder="Salary Range"
-                  className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                  />
-              {errors.salaryRange && touched.salaryRange ? (<div className='text-red-700 p-1 font-semibold'>{errors.salaryRange}</div>) : null}
-              <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-5/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Experience
-                </label>
-                <input
-                  type="text"
-                  placeholder="Experience"
-                  className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                />
-              {errors.experience && touched.experience ? (<div className='text-red-700 p-1 font-semibold'>{errors.experience}</div>) : null}
-              <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-7/12">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Qualification
-                </label>
-                <input
-                  type="text"
-                  placeholder="Qualification"
-                  className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
-                  />
-              {errors.Qualification && touched.Qualification ? (<div className='text-red-700 p-1 font-semibold'>{errors.Qualification}</div>) : null}
-              <ErrorMessage name="name" />
-              </div>
-            </div>
-            <div className="lg:w-12/12 w-full px-4 md:w-1/2">
-              <div className="mb-12">
-                <label className="mb-3 block text-base font-medium text-blue-500">
-                  Job Description
-                </label>
-                <textarea
-                  rows={8}
-                  placeholder="Job Description"
-                  className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary resize-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD] max-sm:w-full sm:w-[1020px] md:w-full lg:w-[1020px] xl:w-[1280px]"
-                  ></textarea>
-              {errors.jobDescription && touched.jobDescription ? (<div className='text-red-700 p-1 font-semibold'>{errors.jobDescription}</div>) : null}
-                  <ErrorMessage name="name" />
-              </div>
-            </div>
-          </div>
-          <div className="flex w-full">
-                  <div className='mx-auto'>
-                    <button 
+                    <div className="w-full px-4 lg:w-6/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Job Category
+                        </label>
+                        <div className="relative">
+                          <select className="border-form-stroke text-body-color focus:border-primary active:border-primary w-full appearance-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]">
+                            <option value="">Technology</option>
+                            <option value="">Design</option>
+                            <option value="">Marketing</option>
+                            <option value="">Trading</option>
+                            <option value="">Agriculture</option>
+                          </select>
+                          <span className="border-body-color absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b-2 border-r-2"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full px-4 lg:w-6/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Job Type
+                        </label>
+                        <div className="relative">
+                          <select className="border-form-stroke text-body-color focus:border-primary active:border-primary w-full appearance-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]">
+                            <option value="">Full Time</option>
+                            <option value="">Part Time</option>
+                            <option value="">Week Time</option>
+                            <option value="">Season Time</option>
+                            <option value="">Evening Time</option>
+                          </select>
+                          <span className="border-body-color absolute right-4 top-1/2 mt-[-2px] h-[10px] w-[10px] -translate-y-1/2 rotate-45 border-b-2 border-r-2"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-8/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Job Location
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Location"
+                          className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.Qualification && touched.Qualification ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.Qualification}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-4/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-black">
+                          Salary Range
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Salary Range"
+                          className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.salaryRange && touched.salaryRange ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.salaryRange}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-5/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Experience
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Experience"
+                          className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.experience && touched.experience ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.experience}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="w-full px-4 md:w-1/2 lg:w-7/12">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Qualification
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Qualification"
+                          className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary w-full rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD]"
+                        />
+                        {errors.Qualification && touched.Qualification ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.Qualification}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                    <div className="lg:w-12/12 w-full px-4 md:w-1/2">
+                      <div className="mb-12">
+                        <label className="mb-3 block text-base font-medium text-blue-500">
+                          Job Description
+                        </label>
+                        <textarea
+                          rows={8}
+                          placeholder="Job Description"
+                          className="border-primary text-body-color placeholder-body-color focus:border-primary active:border-primary resize-none rounded-lg border-[1.5px] px-5 py-3 font-medium outline-none transition disabled:cursor-default disabled:bg-[#F5F7FD] max-sm:w-full sm:w-[1020px] md:w-full lg:w-[1020px] xl:w-[1280px]"
+                        ></textarea>
+                        {errors.jobDescription && touched.jobDescription ? (
+                          <div className="p-1 font-semibold text-red-700">
+                            {errors.jobDescription}
+                          </div>
+                        ) : null}
+                        <ErrorMessage name="name" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex w-full">
+                    <div className="mx-auto">
+                      <button
                         type="submit"
                         className="
                               text-body-color
