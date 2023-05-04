@@ -71,7 +71,7 @@ const postJobSchema = Yup.object().shape({
     .max(50, "You should not pass 50 characters"),
 })
 
-export const PostJob: React.FC<{}> = () => {
+export  const PostJob = () => {
   const initialValues: MyFormValues = {
     companyName: "",
     companyWebsite: "",

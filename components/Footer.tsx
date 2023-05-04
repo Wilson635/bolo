@@ -41,6 +41,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">Company</h1>
+<<<<<<< HEAD
               <span>
               <a href="#" className="border-purple-500 hover:border-b-2">
                 The Team
@@ -67,11 +68,18 @@ const Footer = () => {
                   Testimony
                 </Link>
               </span>
+=======
+              <Link href="/team">The Team</Link>
+              <Link href="/about">About Us</Link>
+              <a href="#">Blog</a>
+              <Link href="/testimony">Testimony</Link>
+>>>>>>> 6571224072d40fe38cb3e887f6f3951c35fab1e8
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">
                 Resources
               </h1>
+<<<<<<< HEAD
               <span>
                 <a href="#" className="border-purple-500 hover:border-b-2">
                   Support
@@ -92,6 +100,12 @@ const Footer = () => {
                   Blog
                 </a>
               </span>
+=======
+              <a href="#">Support</a>
+              <Link href="/contact">Contact</Link>
+              <a href="#">Blog</a>
+              <a href="#">Helpful Resource</a>
+>>>>>>> 6571224072d40fe38cb3e887f6f3951c35fab1e8
             </div>
           </div>
           <div

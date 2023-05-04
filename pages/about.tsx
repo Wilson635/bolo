@@ -6,6 +6,9 @@ import Person1 from "@/public/assets/person1.png"
 import Person2 from "@/public/assets/person2.png"
 import Head from "next/head"
 import Image from "next/image"
+
+
+
 const About = () => {
   return (
     <div>
