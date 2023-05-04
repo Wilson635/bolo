@@ -160,7 +160,6 @@ const contactSchema = Yup.object().shape({
                       rounded-lg
                         text-sm px-5 py-2.5 m-2
                       focus:outline-none
-                    
                   "
                 >SEND
                 </button>
