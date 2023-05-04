@@ -8,11 +8,11 @@ import Image from "next/image";
 const AutoplaySlider = () => {
   const sliderData = [
     {
-      image: "/assets/person1.png",
+      image: "/assets/rt.png",
       title: "image 1",
     },
     {
-      image: "/assets/person1.png",
+      image: "/assets/person6.png",
       title: "Image 2",
     },
     {
@@ -42,11 +42,12 @@ const AutoplaySlider = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 1,
+    speed: 200,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1500,
+    // cssEase:"linear",
     prevArrow: <PrevArrow />,
     nextArrow: <NextArrow />,
   };
@@ -56,13 +57,14 @@ const AutoplaySlider = () => {
       {sliderData.map((slide) => (
         <div key={slide.title}>
           <Image
-            className="w-300 h-300 mx-auto overflow-hidden rounded-lg transition-opacity hover:opacity-"
+            className="w-200 h-200 animation: spin 1s linear infinite mx-auto overflow-hidden rounded-lg transition-opacity bg-red-100"
             src={slide.image}
             alt={slide.title}
-            width={500}
-            height={500}
+            width={400}
+            height={400}
+            style={{ width: 175 }}
           />
-                    <h3 className="mt-4 text-2xl text-white">{slide.title}</h3>
+          <h3 className="mt-4 text-2xl text-white">{slide.title}</h3>
         </div>
       ))}
     </Slider>
