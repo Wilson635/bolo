@@ -1,16 +1,16 @@
-import Logo from "@/public/assets/bolo.png";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { HiMagnifyingGlass } from "react-icons/hi2";
-import { RxCross1 } from "react-icons/rx";
+import Logo from "@/public/assets/bolo.png"
+import Image from "next/image"
+import Link from "next/link"
+import { useState } from "react"
+import { AiOutlineMenu } from "react-icons/ai"
+import { HiMagnifyingGlass } from "react-icons/hi2"
+import { RxCross1 } from "react-icons/rx"
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   return (
     <header>
@@ -149,16 +149,13 @@ const NavBar = () => {
           <div className="hidden lg:ml-6 lg:flex lg:items-center">
             <div className="relative flex items-center space-x-6 font-sans">
               <div className="border-b-2 border-sky-500">
-                <Link
-                  href="/login"
-                  legacyBehavior
-                >
+                <Link href="/login" legacyBehavior>
                   <a className="text-skin-menu hover:text-skin-menu-hover relative  inline-flex items-center text-sm font-medium">
                     <span className="absolute left-8 top-0 mr-1 inline-block h-4 w-4 animate-ping rounded-full  bg-purple-800 "></span>
                     <span>Login</span>
                   </a>
                 </Link>
-              </div >
+              </div>
               <div>
                 <Link href="/register" legacyBehavior>
                   <a className="text-skin-menu hover:text-skin-menu-hover inline-flex items-center text-sm font-medium">
@@ -171,7 +168,7 @@ const NavBar = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
