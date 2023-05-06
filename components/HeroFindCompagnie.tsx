@@ -1,103 +1,103 @@
-import { BiSearch } from "react-icons/bi";
-import { FaPeriscope } from "react-icons/fa";
+import { BiSearch } from "react-icons/bi"
+import { FaPeriscope } from "react-icons/fa"
 
 const HeroFindCompagnie = () => {
-    return (
-        <>
-            <div 
-                className="
+  return (
+    <>
+      <div
+        className="
+                    mx-auto 
+                    h-[400px]
+                    justify-center
                     bg-[url('/assets/bgc.jpg')] 
                     bg-cover
-                    mx-auto
-                    justify-center 
                     text-center
-                    h-[400px]
                 "
-            >
-                <div 
-                    className="
+      >
+        <div
+          className="
                         py-12
-                        lg:py-8
-                        font-bold
                         text-4xl
+                        font-bold
+                        lg:py-8
                     "
-                >
-                    Find your <span className="text-blue-500/50 underline"> dream compagny </span>
-                </div>
+        >
+          Find your{" "}
+          <span className="text-blue-500/50 underline"> dream compagny </span>
+        </div>
 
-                <div className="text-md">
-                    Find the dream compagnies, you dream work for
-                </div>
-                
-                <div className="flex flex-col justify-center items-center">
-                    <div 
-                        className="
-                        bg-white 
-                            lg:w-[50rem] sm:w-[40rem] 
-                            shadow-md 
-                            justify-between 
-                            items-center 
+        <div className="text-md">
+          Find the dream compagnies, you dream work for
+        </div>
+
+        <div className="flex flex-col items-center justify-center">
+          <div
+            className="
+                        divider 
+                            mt-8 flex 
                             h-16 
-                            mt-8
-                            flex
-                            grid-cols-3
+                            grid-cols-3 
+                            items-center 
+                            justify-between 
                             rounded-lg
-                            divider 
+                            bg-white
+                            shadow-md
+                            sm:w-[40rem]
+                            lg:w-[50rem] 
                             "
-                    >
-                        <div 
-                            className="
+          >
+            <div
+              className="
                                 flex 
                                 gap-3
                             "
-                        >
-                            <BiSearch className="text-3xl ml-3 text-slate mt-2"/>
-                            <input 
-                                type="text" 
-                                name="category" 
-                                placeholder="Company name or keyword"
-                                className="text-slate-500 sm:text-xs text-md outline-none w-[15rem] h-9 border-b-[1px] border-b-slate-500"
-                            />
-                        </div>
-                        <div className="flex border-l-[1px] border-l-slate-500 h-9"></div>
-                        <div 
-                            className="
+            >
+              <BiSearch className="text-slate ml-3 mt-2 text-3xl" />
+              <input
+                type="text"
+                name="category"
+                placeholder="Company name or keyword"
+                className="text-md h-9 w-[15rem] border-b-[1px] border-b-slate-500 text-slate-500 outline-none sm:text-xs"
+              />
+            </div>
+            <div className="flex h-9 border-l-[1px] border-l-slate-500"></div>
+            <div
+              className="
                             flex 
                             gap-3
                             "
-                            >
-                            <FaPeriscope className="text-3xl text-slate mt-2"/>
-                            <input 
-                                type="text" 
-                                name="category" 
-                                placeholder="Florance, Italy"
-                                className="text-slate-500 sm:text-xs text-md outline-none lg:w-[15rem] h-9 border-b-[1px] border-b-slate-500"
-                                />
-                        </div>
-                        <div 
-                            className="
-                            flex 
+            >
+              <FaPeriscope className="text-slate mt-2 text-3xl" />
+              <input
+                type="text"
+                name="category"
+                placeholder="Florance, Italy"
+                className="text-md h-9 border-b-[1px] border-b-slate-500 text-slate-500 outline-none sm:text-xs lg:w-[15rem]"
+              />
+            </div>
+            <div
+              className="
+                            mr-2.5 
+                            flex
                             gap-3
+                            rounded-md
                             bg-blue-500
                             px-8
-                            py-2
-                            mr-2.5
-                                rounded-md
+                                py-2
                                 text-white
                             "
-                        >
-                            Search
-                        </div>
-                    </div>
-
-                    <div className="text-md flex justify-start items-start text-slate-600">
-                        
-                        <p>Popular : Twitter, Apple, Facebook, Microsoft</p>
-                    </div>
-                </div>
+            >
+              Search
             </div>
-        </>
-    );
+          </div>
+
+          <div className="text-md flex items-start justify-start text-slate-600">
+            <p>Popular : Twitter, Apple, Facebook, Microsoft</p>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
-export default HeroFindCompagnie;
+export default HeroFindCompagnie
