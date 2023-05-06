@@ -1,3 +1,4 @@
+import Person6 from "@/public/assets/person6.png"
 import Head from "next/head"
 import * as React from "react"
 import { FcCustomerSupport } from "react-icons/fc"
@@ -186,13 +187,13 @@ export default function HomePage() {
                 <hr className="my-4 border-slate-100" />
                 <div className="flex">
                   <img
-                    src="/assets/person2.png"
+                    src="/assets/person6.png"
                     alt="ui"
                     className="mr-3 h-10 w-10 rounded-full object-cover"
                   />
-                  <p className="text-sm font-semibold capitalize text-slate-600">
+                  <p className="text-sm font-semibold capitalize text-blue-500">
                     Wilson{" "}
-                    <span className="block text-xs text-slate-400">
+                    <span className="block text-xs text-purple-400">
                       web designer
                     </span>
                   </p>
@@ -202,7 +203,7 @@ export default function HomePage() {
 
             <div className="w-full duration-200 hover:scale-95">
               <div className="max-h-52 w-full overflow-hidden rounded-t-xl">
-                <img src="/assets/person1.png" alt="ui" className="w-full" />
+                <img src="/assets/person6.png" alt="ui" className="w-full" />
               </div>
               <div className="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10">
                 <div className="">
@@ -227,9 +228,9 @@ export default function HomePage() {
                     alt="ui"
                     className="mr-3 h-10 w-10 rounded-full object-cover"
                   />
-                  <p className="text-sm font-semibold capitalize text-slate-600">
+                  <p className="text-sm font-semibold capitalize text-blue-500">
                     Penpen{" "}
-                    <span className="block text-xs text-slate-400">
+                    <span className="block text-xs text-purple-400">
                       Front developer
                     </span>
                   </p>
@@ -239,7 +240,7 @@ export default function HomePage() {
 
             <div className="w-full duration-200 hover:scale-95">
               <div className="max-h-52 w-full overflow-hidden rounded-t-xl">
-                <img src="/assets/person1.png" alt="ui" className="w-full" />
+                <img src="/assets/person-11.png" alt="ui" className="w-full" />
               </div>
               <div className="rounded-b-xl px-5 pb-5 pt-3 shadow-md shadow-blue-500/10">
                 <div className="">
@@ -270,9 +271,9 @@ export default function HomePage() {
                     alt="ui"
                     className="mr-3 h-10 w-10 rounded-full object-cover"
                   />
-                  <p className="text-sm font-semibold capitalize text-slate-600">
+                  <p className="text-sm font-semibold capitalize text-blue-500">
                     Samuel{" "}
-                    <span className="block text-xs text-slate-400">
+                    <span className="block text-xs text-purple-400">
                       Back developer
                     </span>
                   </p>
@@ -294,7 +295,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl rounded-[25px] bg-blue-500 px-8 md:px-6">
           <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:gap-10">
             <div className="h-full w-full">
-              <img src="/assets/person2.png" alt="upload" className="py-10" />
+              <img src="/assets/person-12.png" alt="upload" className="py-10" />
             </div>
             <div className="items-center justify-center text-left">
               <h1 className="items-center justify-center text-left text-5xl font-semibold text-white sm:mt-[50px] md:mt-[100px]">

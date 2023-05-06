@@ -7,6 +7,7 @@ import Image4 from "@/public/assets/blog/image4.jpg"
 import Image5 from "@/public/assets/blog/image5.jpg"
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
 import { FiArrowUpRight } from "react-icons/fi"
 import {
   HiArrowDownCircle,
@@ -77,7 +78,7 @@ const Blog = () => {
   return (
     <>
       <Head>
-        <title>Post Jobs | Bolo</title>
+        <title>Blog | Bolo</title>
         <meta name="description" content="Bolo - Find your dream job" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -91,31 +92,39 @@ const Blog = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center">
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {cardsData.map((cardData, index) => (
-              <div key={index} className="flex w-full max-w-sm flex-col gap-2">
-                <Image src={cardData.imageSrc} alt={""}></Image>
-                <h3 className="pt-2 text-sm font-semibold">
-                  {cardData.author} - {cardData.date}
-                </h3>
-                <div className="flex items-center justify-between">
-                  <h2 className="text-2xl font-bold">{cardData.title}</h2>
-                  <FiArrowUpRight className="text-2xl" />
+          <Link href="/blog/article">
+            <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {cardsData.map((cardData, index) => (
+                <div
+                  key={index}
+                  className="flex w-full max-w-sm flex-col gap-2"
+                >
+                  <Image src={cardData.imageSrc} alt={""} />
+                  <h3 className="pt-2 text-sm font-semibold text-purple-500">
+                    {cardData.author} - {cardData.date}
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <h2 className="text-2xl font-bold">{cardData.title}</h2>
+                    <FiArrowUpRight className="text-2xl text-blue-500" />
+                  </div>
+                  <p className="text-sm text-slate-600">
+                    {cardData.description}
+                  </p>
+                  <div className="flex gap-2 font-semibold">
+                    {cardData.tags.map((tag, index) => (
+                      <div
+                        key={index}
+                        className="rounded-3xl border border-blue-500 px-2 text-sm text-blue-500"
+                      >
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-sm text-slate-600">{cardData.description}</p>
-                <div className="flex gap-2 font-semibold">
-                  {cardData.tags.map((tag, index) => (
-                    <div
-                      key={index}
-                      className="rounded-3xl border border-black px-2 text-sm "
-                    >
-                      {tag}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </Link>
+
           <button className="mt-10 flex items-center rounded-3xl bg-slate-900 p-2 px-3 text-white">
             <HiOutlineArrowDownCircle className="text-2xl" />
             <span className="ml-2 text-lg font-bold">Load More</span>

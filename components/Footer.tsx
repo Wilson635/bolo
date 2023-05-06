@@ -48,9 +48,12 @@ const Footer = () => {
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">Company</h1>
               <span>
-                <a href="#" className="border-purple-500 hover:border-b-2">
+                <Link
+                  href="/team"
+                  className="border-purple-500 hover:border-b-2"
+                >
                   The Team
-                </a>
+                </Link>
               </span>
               <span>
                 <Link
@@ -87,9 +90,12 @@ const Footer = () => {
                 </a>
               </span>
               <span>
-                <a href="#" className="border-purple-500 hover:border-b-2">
+                <Link
+                  href="/contact"
+                  className="border-purple-500 hover:border-b-2"
+                >
                   Contact
-                </a>
+                </Link>
               </span>
               <span>
                 <a href="#" className="border-purple-500 hover:border-b-2">
