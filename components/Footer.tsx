@@ -35,9 +35,12 @@ const Footer = () => {
                 </Link>
               </span>
               <span>
-                <a href="#" className="border-purple-500 hover:border-b-2">
+                <Link
+                  href="/findCompany"
+                  className="border-purple-500 hover:border-b-2"
+                >
                   Find companies
-                </a>
+                </Link>
               </span>
               <span>
                 <a href="#" className="border-purple-500 hover:border-b-2">
