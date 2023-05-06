@@ -18,26 +18,92 @@ const Footer = () => {
               <h1 className="mb-5 text-2xl font-bold text-blue-600">
                 Navigation
               </h1>
-              <Link href="/findJob">Find a job</Link>
-              <Link href="/postJob">Post a job</Link>
-              <a href="#">Find companies</a>
-              <a href="#">Carrier advice</a>
+              <span>
+                <Link
+                  href="/findJob"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Find a job
+                </Link>
+              </span>
+              <span>
+                <Link
+                  href="/postJob"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Post a job
+                </Link>
+              </span>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Find companies
+                </a>
+              </span>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Carrier advice
+                </a>
+              </span>
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">Company</h1>
-              <a href="#">The Team</a>
-              <Link href="/about">About Us</Link>
-              <a href="#">Blog</a>
-              <Link href="/testimony">Testimony</Link>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  The Team
+                </a>
+              </span>
+              <span>
+                <Link
+                  href="/about"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  About Us
+                </Link>
+              </span>
+              <span>
+                <Link
+                  href="/blog"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Blog
+                </Link>
+              </span>
+              <span>
+                <Link
+                  href="/testimony"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Testimony
+                </Link>
+              </span>
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">
                 Resources
               </h1>
-              <a href="#">Support</a>
-              <a href="#">Contact</a>
-              <a href="#">Blog</a>
-              <a href="#">Helpful Resource</a>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Support
+                </a>
+              </span>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Contact
+                </a>
+              </span>
+              <span>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Helpful Resource
+                </a>
+              </span>
+              <span>
+                <Link
+                  href="/blog"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Blog
+                </Link>
+              </span>
             </div>
           </div>
           <div
@@ -52,7 +118,7 @@ const Footer = () => {
                 placeholder="Email"
                 className="w-1/2 rounded-l-2xl bg-slate-200 px-3 py-2.5 text-sm"
               />
-              <button className="rounded-r-2xl bg-blue-600 p-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
+              <button className="rounded-r-2xl bg-purple-500  p-2.5 text-sm font-semibold text-white transition hover:bg-blue-700">
                 Subscribe
               </button>
             </div>
