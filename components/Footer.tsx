@@ -19,32 +19,38 @@ const Footer = () => {
                 Navigation
               </h1>
               <span>
-              <Link href="/findJob" className="border-purple-500 hover:border-b-2">
-                Find a job
-              </Link>
+                <Link
+                  href="/findJob"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Find a job
+                </Link>
               </span>
               <span>
-              <Link href="/postJob" className="border-purple-500 hover:border-b-2">
-                Post a job
-              </Link>
+                <Link
+                  href="/postJob"
+                  className="border-purple-500 hover:border-b-2"
+                >
+                  Post a job
+                </Link>
               </span>
               <span>
-              <a href="#" className="border-purple-500 hover:border-b-2">
-                Find companies
-              </a>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Find companies
+                </a>
               </span>
               <span>
-              <a href="#" className="border-purple-500 hover:border-b-2">
-                Carrier advice
-              </a>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  Carrier advice
+                </a>
               </span>
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">Company</h1>
               <span>
-              <a href="#" className="border-purple-500 hover:border-b-2">
-                The Team
-              </a>
+                <a href="#" className="border-purple-500 hover:border-b-2">
+                  The Team
+                </a>
               </span>
               <span>
                 <Link
@@ -55,9 +61,12 @@ const Footer = () => {
                 </Link>
               </span>
               <span>
-                <a href="#" className="border-purple-500 hover:border-b-2">
+                <Link
+                  href="/blog"
+                  className="border-purple-500 hover:border-b-2"
+                >
                   Blog
-                </a>
+                </Link>
               </span>
               <span>
                 <Link
@@ -67,10 +76,6 @@ const Footer = () => {
                   Testimony
                 </Link>
               </span>
-              <Link href="/team">The Team</Link>
-              <Link href="/about">About Us</Link>
-              <a href="#">Blog</a>
-              <Link href="/testimony">Testimony</Link>
             </div>
             <div className="flex flex-col gap-2 font-semibold">
               <h1 className="mb-5 text-2xl font-bold text-blue-600">
@@ -92,14 +97,13 @@ const Footer = () => {
                 </a>
               </span>
               <span>
-                <a href="#" className="border-purple-500 hover:border-b-2">
+                <Link
+                  href="/blog"
+                  className="border-purple-500 hover:border-b-2"
+                >
                   Blog
-                </a>
+                </Link>
               </span>
-              <a href="#">Support</a>
-              <Link href="/contact">Contact</Link>
-              <a href="#">Blog</a>
-              <a href="#">Helpful Resource</a>
             </div>
           </div>
           <div
@@ -143,7 +147,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
+  )
 }
 
 export default Footer
