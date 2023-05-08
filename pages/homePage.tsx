@@ -15,8 +15,10 @@ import {
 } from "react-icons/hi2"
 import Footer from "../components/Footer"
 import NavBar from "../components/Navbar"
+import Typewriter from 'typewriter-effect'
 
 export default function HomePage() {
+
   return (
     <>
       <Head>
@@ -34,7 +36,34 @@ export default function HomePage() {
         <div className="text-center">
           <h3 className="py-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             One Platform <br />
-            Many <span className="text-blue-500">Solutions</span>
+            Many 
+            <span className="text-blue-500">
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.typeString('Jobs')
+                    .callFunction(() => {
+                      console.log('String typed out!');
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log('All strings were deleted');
+                    })
+                    .start();
+
+                    typewriter.typeString('opprtunities')
+                    .callFunction(() => {
+                      console.log('String typed out!');
+                    })
+                    .pauseFor(2500)
+                    .deleteAll()
+                    .callFunction(() => {
+                      console.log('All strings were deleted');
+                    })
+                    .start();
+                }}
+              />
+            </span>
           </h3>
         </div>
         <div className="py-16">
