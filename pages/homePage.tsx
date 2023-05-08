@@ -1,21 +1,14 @@
 import Person6 from "@/public/assets/person6.png"
 import Head from "next/head"
 import * as React from "react"
-import { FcCustomerSupport } from "react-icons/fc"
+import { FcAdvertising, FcBriefcase, FcConferenceCall, FcCustomerSupport, FcDepartment, FcDoughnutChart, FcFolder, FcTemplate } from "react-icons/fc"
 import {
   HiArrowDownTray,
-  HiBriefcase,
-  HiChartPie,
-  HiCommandLine,
-  HiFolder,
-  HiMegaphone,
-  HiNewspaper,
-  HiOutlineArrowLongRight,
-  HiUserGroup,
+  HiOutlineArrowLongRight
 } from "react-icons/hi2"
 import Footer from "../components/Footer"
 import NavBar from "../components/Navbar"
-import Typewriter from 'typewriter-effect'
+import Typical from "react-typical"
 
 export default function HomePage() {
 
@@ -33,35 +26,22 @@ export default function HomePage() {
 
       {/* -- category start -- */}
       <div className="bg-white">
-        <div className="text-center">
+        <div className="text-left">
           <h3 className="py-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             One Platform <br />
             Many 
             <span className="text-blue-500">
-              <Typewriter
-                onInit={(typewriter) => {
-                  typewriter.typeString('Jobs')
-                    .callFunction(() => {
-                      console.log('String typed out!');
-                    })
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .callFunction(() => {
-                      console.log('All strings were deleted');
-                    })
-                    .start();
-
-                    typewriter.typeString('opprtunities')
-                    .callFunction(() => {
-                      console.log('String typed out!');
-                    })
-                    .pauseFor(2500)
-                    .deleteAll()
-                    .callFunction(() => {
-                      console.log('All strings were deleted');
-                    })
-                    .start();
-                }}
+            <Typical
+                steps={[
+                  'Jobs',
+                  1000,
+                  'Hello',
+                  2000,
+                  'Where',
+                  2000,
+                ]}
+                wrapper="p"
+                loop={Infinity}
               />
             </span>
           </h3>
@@ -71,79 +51,79 @@ export default function HomePage() {
             <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4 xl:gap-6">
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiMegaphone className="text-6xl text-blue-500 group-hover:text-red-500" />
+                  <FcAdvertising className="text-6xl text-blue-500 group-hover:text-red-500" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Marketing & Communication
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer  flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 text-left shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap">
-                  <HiBriefcase className="text-6xl text-blue-500 group-hover:text-white" />
+                  <FcBriefcase className="text-6xl text-blue-500 group-hover:text-white" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Buisiness & Consulting
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiCommandLine className="text-6xl text-blue-500 group-hover:text-green-500" />
+                  <FcTemplate className="text-6xl text-blue-500 group-hover:text-green-500" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Design & Development
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiUserGroup className="text-6xl text-blue-500 group-hover:text-white" />
+                  <FcConferenceCall className="text-6xl text-blue-500 group-hover:text-white" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Human Research & Development
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiChartPie className="text-6xl text-blue-500 group-hover:text-white" />
+                  <FcDoughnutChart className="text-6xl text-blue-500 group-hover:text-white" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Finance Management
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiNewspaper className="text-6xl text-blue-500 group-hover:text-white" />
+                  <FcDepartment className="text-6xl text-blue-500 group-hover:text-white" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Government Jobs
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
@@ -156,20 +136,20 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
 
               <div className="group flex cursor-pointer flex-col rounded-xl border border-gray-500/10 bg-white px-5 py-8 shadow-lg shadow-slate-300 duration-200 hover:bg-blue-500">
                 <div className="flex-wrap text-left">
-                  <HiFolder className="text-6xl text-blue-500 group-hover:text-white" />
+                  <FcFolder className="text-6xl text-blue-500 group-hover:text-white" />
                   <h4 className="mb-1 mt-3 text-left text-[17px] font-semibold text-slate-600 duration-200 group-hover:text-white">
                     Project Management
                   </h4>
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
                 </p>
               </div>
             </div>
