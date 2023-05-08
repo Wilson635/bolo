@@ -26,24 +26,10 @@ export default function HomePage() {
 
       {/* -- category start -- */}
       <div className="bg-white">
-        <div className="text-left">
+        <div className="text-center">
           <h3 className="py-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             One Platform <br />
-            Many 
-            <span className="text-blue-500">
-            <Typical
-                steps={[
-                  'Jobs',
-                  1000,
-                  'Hello',
-                  2000,
-                  'Where',
-                  2000,
-                ]}
-                wrapper="p"
-                loop={Infinity}
-              />
-            </span>
+            Many <span className="text-blue-500"> Solutions </span>
           </h3>
         </div>
         <div className="py-16">
@@ -58,7 +44,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -71,7 +57,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -84,7 +70,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -97,7 +83,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -110,7 +96,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -123,7 +109,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -136,7 +122,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
 
@@ -149,7 +135,7 @@ export default function HomePage() {
                 </div>
                 <p className="mt-5 flex gap-24 text-sm font-medium text-slate-500 duration-200 group-hover:text-blue-200">
                   237 Jobs Available{" "}
-                  <HiOutlineArrowLongRight className="text-2xl animate-bounce" />
+                  <HiOutlineArrowLongRight className="text-2xl animate-bounce text-rose-500" />
                 </p>
               </div>
             </div>
