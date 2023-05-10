@@ -8,7 +8,6 @@ import {
 } from "react-icons/hi2"
 import Footer from "../components/Footer"
 import NavBar from "../components/Navbar"
-import Typical from "react-typical"
 
 export default function HomePage() {
 
